@@ -8,6 +8,7 @@ services:
     envVars:
       - key: API_KEY
         fromDatabase: true
+        
 databases:
   - name: backend-db
     plan: starter
