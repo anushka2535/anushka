@@ -7,13 +7,10 @@ services:
     startCommand: "skillgap app:app"
     envVars:
       - key: API_KEY
-        fromDatabase: true
+        value:"your_api_key_here"
         
 databases:
   - name: backend-db
     plan: starter
 
-jobs:
-  - name: Get API Key
-    type: shell
-    command: "echo $API_KEY"
+
