@@ -7,7 +7,7 @@ services:
     startCommand: "skillgap app:app"
     envVars:
       - key: API_KEY
-        value:"your_api_key_here"
+        value: "your_api_key_here"
         
 databases:
   - name: backend-db
