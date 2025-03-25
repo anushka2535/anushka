@@ -1,1 +1,18 @@
+services:
+  - type: web
+    name: backend-service
+    env: python
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "skillgap app:app"
+    envVars:
+      - key: API_KEY
+        fromDatabase: true
+databases:
+  - name: backend-db
+    plan: starter
 
+jobs:
+  - name: Get API Key
+    type: shell
+    command: "echo $API_KEY"
