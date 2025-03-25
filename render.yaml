@@ -2,7 +2,7 @@ services:
   - type: web
     name: backend-service
     env: python
-    plan: starter
+    plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "skillgap app:app"
     envVars:
@@ -11,6 +11,6 @@ services:
         
 databases:
   - name: backend-db
-    plan: starter
+    plan: free
 
 
